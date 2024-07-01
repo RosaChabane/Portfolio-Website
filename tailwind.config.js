@@ -13,7 +13,9 @@ export default {
         '70/30': '70% 28%',
       },
       colors: {
-        navColor: 'rgba(244, 99, 174, 0.8)',
+        navColor: 'rgba(244, 99, 174, 1)',
+        coralTheme: 'rgb(238, 116, 129, 1)',
+        blueTheme: 'rgb(70, 101, 149, 1)',
         cardColor: 'rgba(255, 233, 225, 1)',
       },
     },

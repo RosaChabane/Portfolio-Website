@@ -7,37 +7,14 @@ const HomeCards = () => {
   return (
     <section className='py-4'>
       <div className='container mx-auto'>
-        <div className='flex flex-wrap justify-center gap-2 p-4 rounded-lg'>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faHtml5} size="3x" className="text-black" />
-            </Card>
-          </div>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faJs} size="3x" className="text-black" />
-            </Card>
-          </div>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faCss3Alt} size="3x" className="text-black" />
-            </Card>
-          </div>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faReact} size="3x" className="text-black" />
-            </Card>
-          </div>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faAws} size="3x" className="text-black" />
-            </Card>
-          </div>
-          <div className='w-full md:w-1/2 lg:w-1/4'>
-            <Card bg='bg-cardColor' className='h-48'>
-              <FontAwesomeIcon icon={faNodeJs} size="3x" className="text-black" />
-            </Card>
-          </div>
+        <div className='grid grid-cols-2 gap-4 p-4 rounded-lg'>
+          {[faHtml5, faJs, faCss3Alt, faReact, faAws, faNodeJs, faNodeJs, faNodeJs].map((icon, index) => (
+            <div key={index} className='w-full'>
+              <Card bg='bg-cardColor' className='h-32'>
+                <FontAwesomeIcon icon={icon} size="2x" className="text-black" />
+              </Card>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -45,3 +22,4 @@ const HomeCards = () => {
 };
 
 export default HomeCards;
+
