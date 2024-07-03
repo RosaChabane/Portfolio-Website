@@ -3,7 +3,7 @@ import pic from '../assets/retro.png';
 
 const Hero = ({
     title = "I'm Rosa Chabane",
-    subtitle = "SOFTWARE ENIGNEER",
+    subtitle = "SOFTWARE ENGINEER",
 }) => {
 
     const h1Ref = useRef(null);
@@ -24,7 +24,7 @@ const Hero = ({
           <h1 ref={h1Ref} className='text-4xl font-extrabold text-black sm:text-5xl md:text-7xl typing-effect'>
             {title}
           </h1>
-          <p className='my-4 text-3xl md:text-4xl lg:text-4xl text-black text-center lg:text-left'>{subtitle}</p>
+          <span className='my-4 text-3xl md:text-4xl lg:text-4xl text-gray-500 text-center lg:text-left'>{subtitle}</span>
         </div>
         <div>
             <img className='w-full lg:w-auto' src={pic} alt="" />
