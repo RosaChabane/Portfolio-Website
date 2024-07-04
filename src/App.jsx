@@ -16,9 +16,9 @@ const App = () => {
       <section id="about">
         <About />
       </section>
-      <section id="skills">
+      {/* <section id="skills">
         <ScrollingSkillCards />
-      </section>
+      </section> */}
       <section id="projects">
         <Projects />
       </section>
