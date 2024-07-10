@@ -13,7 +13,7 @@
   
 .typing-effect {
     overflow: hidden;
-    border-right: .15em solid white; 
+    border-right: .15em solid rgb(255, 255, 255); 
     white-space: nowrap; 
     animation: typing 2.5s steps(40, end) forwards;
 }
@@ -45,7 +45,7 @@
   .scrolling-row {
     display: flex;
     width: 200%;
-    animation: scroll 35s linear infinite;
+    animation: scroll 40s linear infinite;
   }
   
   .card {
@@ -57,6 +57,9 @@
     box-shadow: 0 2px 4px rgba(163, 160, 160, 0.1);
   }
   
+/* .hero-div {
+  border: 20px solid white;
+} */
 /* .overlay {
     position: absolute;
     top: 0;
@@ -85,10 +88,10 @@
                  0 0 10px #ff00ff;
   } */
 
-  .text-outline {
-    color: #ffffff;
+  /* .text-outline {
+    color: #0f0e0e;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  }
+  } */
   
   /* .text-outline {
     text-transform: uppercase;
