@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +19,7 @@
     animation: typing 2.5s steps(40, end) forwards;
 }
   
-/* SKILL CARDS */
+/* SKILL CARDS 
 .custom-card-shadow {
     box-shadow: 0 4px 8px 2px rgba(155, 153, 153, 0.1), 0 3px 10px 2px rgba(117, 117, 117, 0.8);
 }
@@ -57,82 +58,115 @@
     box-shadow: 0 2px 4px rgba(163, 160, 160, 0.1);
   }
   
-/* .hero-div {
-  border: 20px solid white;
-} */
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(161, 160, 160, 0.5); 
-    z-index: 0;
-} 
-*/
-
-
-
-  /* .text-glow {
-    text-shadow: 10px 10px 10px rgb(123, 72, 182), 0 0 20px rgba(128, 128, 128, 0.6);
-  } */
-
-  /* .text-neon {
-    color: #fff;
-    text-shadow: 0 0 5px #fff, 
-                 0 0 10px #fff, 
-                 0 0 10px #ff00ff, 
-                 0 0 10px #ff00ff, 
-                 0 0 10px #ff00ff, 
-                 0 0 10px #ff00ff, 
-                 0 0 10px #ff00ff;
-  } */
-
-  /* .text-outline {
-    color: #0f0e0e;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  } */
+  .icon-background:hover {
+    opacity: 1 !important;
+  }
   
-  /* .text-outline {
-    text-transform: uppercase;
-    font-size: 12em;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-}  */
-
-
+  .icon-background {
+    transition: opacity 0.3s;
+  }
+*/  
+  
 /* HEADSHOT PLACEHOLDER */
 .clip-circle {
-    width: 350px;
-    height: 350px; 
-    clip-path: circle(50%);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 350px;
+  height: 350px; 
+  clip-path: circle(50%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 html {
-    font-family: 'Alexandria';
+  font-family: 'Alexandria';
 }
 
+
+/* HERO SECTION */
+
+.hero-section {
+  height: 80vh; /* Adjust this value to set the desired height */
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box-group {
+  position: relative;
+  transform: rotate(-30deg);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 0.5em;
+  font-size: 4em;
+  width: 200vw;
+}
+
+.iconContainer i {
+  cursor: default;
+  user-select: none;
+  transition: 2s;
+  color: transparent;
+  opacity: 0.35;
+  -webkit-text-stroke: 1px #0f0;
+}
+
+.iconContainer {
+  animation: animate 90s linear infinite;
+}
+
+@keyframes animate {
+  0%,100% {
+    transform: translateX(-100vw);
+  }
+  50% {
+    transform: translateX(0vw);
+  }
+}
+
+.iconContainer:nth-child(even) {
+  animation: animate2 90s linear infinite;
+}
+
+@keyframes animate2 {
+  0%,100% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(-100vw);
+  }
+}
+
+.icon {
+  cursor: default;
+  user-select: none;
+  color: rgb(226, 85, 203);
+  opacity: 0.2;
+  transition: color 0.3s, opacity 0.3s, text-shadow 0.3s;
+}
+
+.icon:hover {
+  color: rgb(132, 112, 185);
+  transition: 0s;
+  opacity: 1;
+  text-shadow: 0 0 120px #0f0;
+}

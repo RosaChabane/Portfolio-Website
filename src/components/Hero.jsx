@@ -1,37 +1,70 @@
-import React, { useEffect, useRef } from 'react';
-import ScrollingSkillCards from './ScrollingSkillCards'; // Import the scrolling background component
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs, faReact, faAws, faNodeJs, faBootstrap } from '@fortawesome/free-brands-svg-icons';
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons'; // Import from solid icons
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 
-const Hero = ({
-    title = "Rosa Chabane",
-    subtitle = "SOFTWARE ENGINEER",
-}) => {
+config.autoAddCss = false;
 
-    const h1Ref = useRef(null);
+const icons = [
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faAws,
+  faNodeJs,
+  faBootstrap,
+  faMicrochip,
+];
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            if (h1Ref.current) {
-                h1Ref.current.style.borderRight = 'none';
-            }
-        }, 3500);
-        return () => clearTimeout(timer);
-    }, []);
+const getRandomIcon = () => {
+  const randomIndex = Math.floor(Math.random() * icons.length);
+  return icons[randomIndex];
+};
 
-    return (
-        <section className='relative py-20 overflow-hidden flex items-center justify-center min-h-[75vh]'>
-            <ScrollingSkillCards />
-            <div className='relative flex flex-col items-center justify-center z-10'>
-                <div className='bg-pink-400 bg-opacity-100 p-10 flex flex-col items-center justify-center hero-div'>
-                    <h1 ref={h1Ref} className='text-4xl font-extrabold text-white sm:text-5xl md:text-7xl typing-effect text-outline'>
-                        {title}
-                    </h1>
-                    <span className='my-4 text-2xl md:text-4xl lg:text-3xl text-white text-center text-outline'>{subtitle}</span>
-                </div>
-            </div>
-            <div className='absolute inset-0 bg-gray-100 opacity-50 z-0'></div>
-        </section>
+const generateIconContainers = (numContainers = 40, numIcons = 80) => {
+  const containers = [];
+  for (let i = 1; i <= numContainers; i++) {
+    const iconsArray = [];
+    for (let j = 0; j < numIcons; j++) {
+      iconsArray.push(
+        <FontAwesomeIcon key={`${i}-${j}`} icon={getRandomIcon()} className="icon" />
+      );
+    }
+    containers.push(
+      <div key={`container-${i}`} className="iconContainer">
+        {iconsArray}
+      </div>
     );
+  }
+  return containers;
+};
+
+const Hero = () => {
+  const iconContainers = generateIconContainers();
+
+  return (
+    <section className="relative flex items-center justify-center hero-section">
+      <div className='box'>
+        <div className="box-group">
+          {iconContainers}
+        </div>
+      </div>
+      <div className='absolute z-10 flex flex-col items-center justify-center'>
+        <h1 className='text-4xl font-extrabold text-textTheme sm:text-7xl md:text-8xl border-b border-textTheme'>Rosa Chabane</h1>
+        <span className='my-4 text-xl md:text-4xl lg:text-4xl text-textTheme'>SOFTWARE ENGINEER</span>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
+
+
+
+
+
+
+
 
