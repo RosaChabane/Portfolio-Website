@@ -74,7 +74,7 @@ html {
 /* HERO SECTION */
 
 .hero-section {
-  height: 80vh; 
+  height: 90vh; 
 }
 
 .box {
@@ -151,4 +151,8 @@ html {
   transition: 0s;
   opacity: 1;
   text-shadow: 0 0 120px #0f0;
+}
+
+.test-nav {
+  background-color: rgb(201, 115, 189);
 }

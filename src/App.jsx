@@ -5,6 +5,7 @@ import About from './components/About';
 import ScrollingSkillCards from './components/ScrollingSkillCards';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import SkillsProgress from './components/SkillsProgress';
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="progress">
+        <SkillsProgress />
       </section>
       {/* <section id="skills">
         <ScrollingSkillCards />
