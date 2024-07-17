@@ -156,3 +156,14 @@ html {
 .test-nav {
   background-color: rgb(201, 115, 189);
 }
+
+/* SKILL BAR SECTION */
+
+.skill-bar .progress-bar {
+  width: 0;
+  transition: width 2s ease;
+}
+
+.skill-bar.animate .progress-bar {
+  width: var(--width);
+}

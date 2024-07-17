@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +21,13 @@ const Navbar = () => {
             <a href="#about" className='text-white'>About Me</a>
             <a href="#projects" className='text-white'>Projects</a>
             <a href="#contact" className='text-white'>Contact Me</a>
+            <div className="h-6 w-px bg-white mx-2"></div>
+            <a href="https://github.com/RosaChabane" className='text-white'>
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a href="https://www.linkedin.com/in/rosachabane/" className='text-white'>
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
           </div>
           <div className='md:hidden'>
             <button onClick={toggleMenu} className='text-white focus:outline-none'>
@@ -34,11 +43,19 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <div className='md:hidden'>
-            <div className='flex flex-col items-start space-y-2 p-4 bg-navColor'>
+            <div className='flex flex-col items-start space-y-2 p-4 bg-violet-400'>
               <a href="#home" className='block px-3 py-2 rounded-md text-base font-medium text-white'>Home</a>
               <a href="#about" className='block px-3 py-2 rounded-md text-base font-medium text-white'>About Me</a>
               <a href="#projects" className='block px-3 py-2 rounded-md text-base font-medium text-white'>Projects</a>
               <a href="#contact" className='block px-3 py-2 rounded-md text-base font-medium text-white'>Contact Me</a>
+              <div className='flex space-x-4 mt-4'>
+                <a href="https://github.com/RosaChabane" className='text-white block px-3 py-2'>
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+                <a href="https://www.linkedin.com/in/rosachabane/" className='text-white block py-2'>
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -48,4 +65,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
 
