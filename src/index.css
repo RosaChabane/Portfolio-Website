@@ -167,3 +167,11 @@ html {
 .skill-bar.animate .progress-bar {
   width: var(--width);
 }
+
+
+.contact-bg {
+  background-color: rgb(255, 195, 232);
+}
+
+
+

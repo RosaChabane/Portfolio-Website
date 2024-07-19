@@ -36,8 +36,8 @@ const Projects = () => {
               <img src={project.gif} alt={project.title} className="w-full h-48 object-cover rounded-t-lg border border-violet-300" />
               <h3 className="text-2xl font-semibold mt-4">{project.title}</h3>
               <p className="mt-2 text-gray-600">{project.description}</p>
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-700 mt-4 inline-block">
-                <FontAwesomeIcon icon={faGithub} className="mr-2" /> GitHub
+              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-700 mt-4 inline-block border border-blue-400 rounded p-2">
+                <FontAwesomeIcon icon={faGithub} className="" /> GitHub
               </a>
             </a>
           ))}
