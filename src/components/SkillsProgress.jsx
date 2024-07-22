@@ -5,7 +5,7 @@ const skills = [
   { name: 'Algorithms & Data Structures', percentage: 50 },
   { name: 'JavaScript', percentage: 98 },
   { name: 'Node.js', percentage: 85 },
-  { name: 'Web Application', percentage: 90 },
+  { name: 'Cloud Development', percentage: 80 },
 ];
 
 const SkillsProgress = () => {
@@ -28,13 +28,29 @@ const SkillsProgress = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    // Dynamically load the script
+    const script = document.createElement('script');
+    script.src = "//cdn.credly.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script when the component is unmounted
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section className="py-20 p-8 w-3/4 mx-auto border-b border-violet-300">
       <div className="max-w-7xl flex flex-col lg:flex-row mx-auto">
         <div className="w-full lg:w-2/3 lg:mr-20 items-start mb-6">
           <h2 className="text-xl font-bold mb-2 text-violet-500">MY SKILLS</h2>
-          <h3 className='text-4xl md:text-5xl lg:text-5xl mb-4 text-textTheme font-semibold'>Sample Title Description</h3>
-          <p className="mb-4 text-textTheme">I have experience in various technologies and continuously improving my skills. in various technologies and continuously improving my skills.</p>
+          <h3 className='text-4xl md:text-5xl lg:text-5xl mb-4 text-textTheme font-semibold'>I Simply Love to Build</h3>
+          <p className="mb-4 text-textTheme text-xl">
+            I have extensive experience in web development, focusing on technologies such as JavaScript, HTML, CSS, React, Node.js, and AWS. 
+            I love to explore new languages and technologies to bring creative ideas to life.
+          </p>
         </div>
         <div className="w-full lg:w-1/2">
           <div className="space-y-4" ref={ref}>
@@ -57,11 +73,22 @@ const SkillsProgress = () => {
           </div>
         </div>
       </div>
+      <div className="p-8 mt-4">
+        <div className='flex-col'>
+        <h2 className="text-xl font-bold text-violet-500 mb-2">CERTIFICATIONS</h2>
+        <h3 className="text-textTheme text-4xl font-semibold mb-2">AWS Certified Developer - Associate</h3>
+        </div>
+        <div className="mt-4">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bc93132c-e391-4652-9aa8-b8153bc4bd0d" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default SkillsProgress;
+
+
 
 
 
