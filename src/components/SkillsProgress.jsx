@@ -28,21 +28,8 @@ const SkillsProgress = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    // Dynamically load the script
-    const script = document.createElement('script');
-    script.src = "//cdn.credly.com/assets/utilities/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script when the component is unmounted
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
-    <section className="py-20 p-8 w-3/4 mx-auto border-b border-violet-300">
+    <section className="mt-20 p-8 w-3/4 mx-auto">
       <div className="max-w-7xl flex flex-col lg:flex-row mx-auto">
         <div className="w-full lg:w-2/3 lg:mr-20 items-start mb-6">
           <h2 className="text-xl font-bold mb-2 text-violet-500">MY SKILLS</h2>
@@ -73,20 +60,14 @@ const SkillsProgress = () => {
           </div>
         </div>
       </div>
-      <div className="p-8 mt-4">
-        <div className='flex-col'>
-        <h2 className="text-xl font-bold text-violet-500 mb-2">CERTIFICATIONS</h2>
-        <h3 className="text-textTheme text-4xl font-semibold mb-2">AWS Certified Developer - Associate</h3>
-        </div>
-        <div className="mt-4">
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bc93132c-e391-4652-9aa8-b8153bc4bd0d" data-share-badge-host="https://www.credly.com"></div>
-        </div>
-      </div>
     </section>
   );
 };
 
 export default SkillsProgress;
+
+
+
 
 
 

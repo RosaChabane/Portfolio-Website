@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import scheduleGif from '../assets/schedule_gif.gif';
 import losbuildingGif from '../assets/losbuilding_gif.gif';
+import portfolioSiteGif from '../assets/portfolio_gif.gif';
 
 const projects = [
   {
@@ -18,6 +19,13 @@ const projects = [
     description: "Website for a building materials supply company.",
     githubLink: "https://github.com/RosaChabane/Los-Building-Materials",
     siteLink: "https://losbuildingmaterials.netlify.app/"
+  },
+  {
+    gif: portfolioSiteGif,
+    title: "My Portfolio Website",
+    description: "Checkout the source code to my website!",
+    githubLink: "https://github.com/RosaChabane/Portfolio-Website",
+    siteLink: ""
   },
   
 ];

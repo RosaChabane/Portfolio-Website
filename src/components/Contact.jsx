@@ -28,7 +28,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 flex items-center justify-center contact-bg">
+    <section id="contact" className="py-20 flex items-center justify-center bg-indigo-200">
       <div className="w-1/3 flex items-center justify-center">
         <FontAwesomeIcon 
           icon={faEnvelope} 
