@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -28,20 +28,24 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 flex items-center justify-center bg-indigo-200">
-      <div className="w-1/3 flex items-center justify-center">
-        <FontAwesomeIcon 
-          icon={faEnvelope} 
-          className="text-white" 
-          style={{ 
-            fontSize: '20rem', 
-            transform: 'rotate(10deg) skew(10deg, 20deg)', 
-            perspective: '500px', 
-            transformStyle: 'preserve-3d' 
-          }} 
-        />
+    <section id="contact" className="py-20 flex flex-col items-center justify-center bg-indigo-100">
+      <div className='pb-5 flex flex-col lg:flex-col'>
+        <div className='flex flex-row p-4'>
+          <FontAwesomeIcon icon={faPhone} className="p-4 border border-textTheme rounded-full text-textTheme" />
+          <div className='flex flex-col ml-4 text-textTheme'>
+            <span className='font-semibold'>PHONE</span>
+            <span>346-666-2511</span>
+          </div>
+        </div>
+        <div className='flex flex-row p-4'>
+          <FontAwesomeIcon icon={faEnvelope} className="p-4 border border-textTheme rounded-full text-textTheme" />
+          <div className='flex flex-col ml-4 text-textTheme'>
+            <span className='font-semibold'>Email</span>
+            <span>rosachabane330@gmail.com</span>
+          </div>
+        </div>
       </div>
-      <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-md w-3/4 bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl font-extrabold text-center mb-6">Contact Me</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
