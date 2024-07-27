@@ -167,3 +167,7 @@ html {
 .skill-bar.animate .progress-bar {
   width: var(--width);
 }
+
+.contact {
+  background-image: url('../tilebg.png');
+}

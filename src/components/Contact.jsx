@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import tile from '../assets/tilebg.png';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -28,9 +30,24 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 flex flex-col items-center justify-center bg-indigo-100">
-      <div className='pb-5 flex flex-col lg:flex-col'>
-        <div className='flex flex-row p-4'>
+    <section 
+      id="contact" 
+      className="py-16 md:py-20 flex flex-col lg:flex-row items-center justify-center border-t border-violet-300 md:w-3/4 mx-auto"
+      // style={{
+      //   backgroundImage: `url(${tile})`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      // }}
+    >
+      <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col'>
+        <div className='pl-4 mb-4 md:mb-0 '>
+          <h2 className='text-violet-500 font-semibold text-xl'>CONTACT ME</h2>
+          <h3 className='text-4xl md:text-5xl text-textTheme font-semibold pb-4'>Shoot Me A Message</h3>
+          <p className='md:pb-10 w-2/3 text-textTheme'>
+            Feel free to message me with any questions or inquiries and I'll get back to you as soon as possible.
+          </p>
+        </div>
+        <div className='flex flex-row p-4 md:pt-0'>
           <FontAwesomeIcon icon={faPhone} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>PHONE</span>
@@ -44,12 +61,18 @@ const ContactForm = () => {
             <span>rosachabane330@gmail.com</span>
           </div>
         </div>
+        <div className='flex flex-row p-4'>
+          <FontAwesomeIcon icon={faLinkedin} className="p-4 border border-textTheme rounded-full text-textTheme" />
+          <div className='flex flex-col ml-4 text-textTheme'>
+            <span className='font-semibold'>LINKEDIN</span>
+            <span>www.linkedin.com/in/rosachabane/</span>
+          </div>
+        </div>
       </div>
-      <div className="max-w-md w-3/4 bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-extrabold text-center mb-6">Contact Me</h2>
+      <div className="max-w-md w-full bg-violet-500 p-10 md:p-16 rounded-lg shadow-lg text-white">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700">Name</label>
+            <label htmlFor="name" className="block">Name</label>
             <input
               type="text"
               id="name"
@@ -61,7 +84,7 @@ const ContactForm = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700">Email</label>
+            <label htmlFor="email" className="block">Email</label>
             <input
               type="email"
               id="email"
@@ -73,7 +96,7 @@ const ContactForm = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700">Message</label>
+            <label htmlFor="message" className="block">Message</label>
             <textarea
               id="message"
               name="message"
@@ -84,7 +107,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="bg-gray-100 text-black px-4 py-2 font-semibold transform transition duration-500 hover:scale-110 hover:bg-opacity-75">
+            <button type="submit" className="bg-violet-300 px-6 py-2 font-semibold transform transition duration-500 hover:scale-110 hover:bg-opacity-75">
               Send Message
             </button>
           </div>
@@ -95,4 +118,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
 
