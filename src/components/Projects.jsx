@@ -25,7 +25,7 @@ const projects = [
   {
     gif: portfolioSiteGif,
     title: "My Portfolio Website",
-    description: "designed to showcase my web development skills, projects, and contact information. This site provides an insight into my technical abilities and creative approach.",
+    description: "Created to showcase my web development skills, projects, and contact information. This site provides an insight into my technical abilities and creative approach.",
     techUsed: "React, Tailwind, Express",
     githubLink: "https://github.com/RosaChabane/Portfolio-Website",
     siteLink: ""

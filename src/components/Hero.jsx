@@ -52,16 +52,16 @@ const Hero = () => {
         </div>
       </div>
       <div className='absolute z-10 flex flex-col items-center justify-center'>
-        <span className='mb-4 font-semibold text-xl md:text-4xl lg:text-4xl text-textTheme'>Hello, I'm</span>
-        <h1 className='text-5xl font-extrabold text-textTheme sm:text-7xl md:text-8xl border-b border-textTheme'>Rosa Chabane</h1>
+        <span className='mb-4 font-semibold text-2xl md:text-4xl lg:text-4xl text-textTheme'>Hello, I'm</span>
+        <h1 className='text-5xl font-extrabold text-textTheme text-5xl md:text-8xl border-b border-textTheme'>Rosa Chabane</h1>
         <h2 className='font-semibold mt-6 text-xl md:text-4xl lg:text-4xl text-textTheme'>SOFTWARE ENGINEER</h2>
         <div className='flex space-x-6 my-8'>
           <a href="https://www.linkedin.com/in/rosachabane/" target="_blank" rel="noopener noreferrer">
-            <button className='px-12 py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>
+            <button className='px-5 md:px-12 py-3 md:py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>
             HIRE ME
           </button>
           </a>
-          <button className='px-10 py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>ABOUT ME</button>
+          <button className='px-4 md:px-10 py-3 md:py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>ABOUT ME</button>
         </div>
       </div>
     </section>

@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { TypeAnimation } from 'react-type-animation';
+import Modal from 'react-modal';
 import pic from '../assets/selfie.jpg';
+import resumePDF from '../assets/Rosa-Chabane-Resume.pdf';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '80%',
+    height: '80%',
+  },
+};
 
 const About = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <section className="py-20 flex items-center justify-center mx-auto w-3/4 border-b border-violet-300">
       <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8 w-full">
@@ -33,7 +58,7 @@ const About = () => {
             <p className="text-textTheme text-xl">
             With a passion for building and learning, 
             my journey in front and back-end development is fueled by self-directed learning and hands-on experience through various projects. 
-            I thrive on leveraging my strong problem-solving and team leadership skills to create scalable solutions. 
+            I thrive on leveraging my strong problem-solving skills to create scalable solutions. 
             I love tackling new challenges, continuously enhancing my skills, and collaborating with others to turn ideas into reality.
             </p>
           </div>
@@ -52,9 +77,14 @@ const About = () => {
                 <span className="text-violet-500">346-666-2511</span>
               </div>
             </div>
-            <button className="bg-violet-500 text-white px-4 py-2 mb-3 mt-2 rounded font-semibold transform transition duration-500 hover:bg-violet-800 hover:scale-110 hover:bg-opacity-85">
-              DOWNLOAD RESUME
-            </button>
+            <div className="flex space-x-4">
+              <button 
+                onClick={openModal}
+                className="bg-violet-500 text-white px-4 py-2 mb-3 mt-2 rounded transform transition duration-500 hover:bg-violet-800 hover:scale-110 hover:bg-opacity-85"
+              >
+                VIEW RESUME
+              </button>
+            </div>
           </div>
           <div className="flex mt-4 space-x-4 text-violet-500">
             <a href="https://github.com/RosaChabane">
@@ -74,11 +104,23 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Resume Modal"
+      >
+        <div className="flex justify-end">
+          <button onClick={closeModal} className="text-xl font-bold">X</button>
+        </div>
+        <iframe src={resumePDF} className="w-full h-full"></iframe>
+      </Modal>
     </section>
   );
 };
 
 export default About;
+
 
 
 

@@ -32,44 +32,44 @@ const ContactForm = () => {
   return (
     <section 
       id="contact" 
-      className="py-16 md:py-20 flex flex-col lg:flex-row items-center justify-center border-t border-violet-300 md:w-3/4 mx-auto"
+      className="py-16 md:py-20 flex flex-col lg:flex-row items-center justify-center border-t border-violet-300 w-3/4 mx-auto justify-between"
       // style={{
       //   backgroundImage: `url(${tile})`,
       //   backgroundSize: 'cover',
       //   backgroundPosition: 'center',
       // }}
     >
-      <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col'>
-        <div className='pl-4 mb-4 md:mb-0 '>
+      <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col w-full justify-between mx-auto pr-8 sm:pr-12'>
+        <div className='mb-4 md:mb-0 w-full'>
           <h2 className='text-violet-500 font-semibold text-xl'>CONTACT ME</h2>
           <h3 className='text-4xl md:text-5xl text-textTheme font-semibold pb-4'>Shoot Me A Message</h3>
-          <p className='md:pb-10 w-2/3 text-textTheme'>
+          <p className='md:pb-10 text-textTheme'>
             Feel free to message me with any questions or inquiries and I'll get back to you as soon as possible.
           </p>
         </div>
-        <div className='flex flex-row p-4 md:pt-0'>
+        <div className='flex flex-row p-4 md:pt-0 w-full'>
           <FontAwesomeIcon icon={faPhone} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>PHONE</span>
             <span>346-666-2511</span>
           </div>
         </div>
-        <div className='flex flex-row p-4'>
+        <div className='flex flex-row p-4 w-full'>
           <FontAwesomeIcon icon={faEnvelope} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>Email</span>
-            <span>rosachabane330@gmail.com</span>
+            <span className=''>rosachabane330@gmail.com</span>
           </div>
         </div>
-        <div className='flex flex-row p-4'>
+        <div className='flex flex-row p-4 w-full'>
           <FontAwesomeIcon icon={faLinkedin} className="p-4 border border-textTheme rounded-full text-textTheme" />
-          <div className='flex flex-col ml-4 text-textTheme'>
+          <div className='flex flex-col ml-4 text-textTheme break-all'>
             <span className='font-semibold'>LINKEDIN</span>
             <span>www.linkedin.com/in/rosachabane/</span>
           </div>
         </div>
       </div>
-      <div className="max-w-md w-full bg-violet-500 p-10 md:p-16 rounded-lg shadow-lg text-white">
+      <div className="max-w-md w-full bg-violet-500 p-10 md:p-16 rounded-lg shadow-lg text-white mx-auto mt-4 sm:mt-0">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block">Name</label>
@@ -118,5 +118,6 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
 
 
