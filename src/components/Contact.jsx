@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import tile from '../assets/tilebg.png';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -33,11 +32,6 @@ const ContactForm = () => {
     <section 
       id="contact" 
       className="py-16 md:py-20 flex flex-col lg:flex-row items-center justify-center border-t border-violet-300 w-3/4 mx-auto justify-between"
-      // style={{
-      //   backgroundImage: `url(${tile})`,
-      //   backgroundSize: 'cover',
-      //   backgroundPosition: 'center',
-      // }}
     >
       <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col w-full justify-between mx-auto pr-8 sm:pr-12'>
         <div className='mb-4 md:mb-0 w-full'>

@@ -6,6 +6,10 @@
 @tailwind utilities;
 
 
+body {
+  font-family: 'Alexandria', sans-serif;
+}
+
 /* HERO SECTION */
 
 .hero-section {
