@@ -17,15 +17,15 @@ const Navbar = () => {
             <span className='text-white font-semibold text-2xl'></span>
           </div>
           <div className='hidden md:flex md:items-center md:space-x-6 font-semibold'>
-            <a href="#hero" className='text-white hover:text-black'>Home</a>
-            <a href="#about" className='text-white hover:text-black'>About Me</a>
-            <a href="#projects" className='text-white hover:text-black'>Projects</a>
-            <a href="#contact" className='text-white hover:text-black'>Contact Me</a>
+            <a href="#hero" className='text-white hover:text-textTheme'>Home</a>
+            <a href="#about" className='text-white hover:text-textTheme'>About Me</a>
+            <a href="#projects" className='text-white hover:text-textTheme'>Projects</a>
+            <a href="#contact" className='text-white hover:text-textTheme'>Contact Me</a>
             <div className="h-6 w-px bg-white mx-2"></div>
-            <a href="https://github.com/RosaChabane" className='text-white hover:text-black'>
+            <a href="https://github.com/RosaChabane" className='text-white hover:text-textTheme'>
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
-            <a href="https://www.linkedin.com/in/rosachabane/" className='text-white hover:text-black'>
+            <a href="https://www.linkedin.com/in/rosachabane/" className='text-white hover:text-textTheme'>
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </div>

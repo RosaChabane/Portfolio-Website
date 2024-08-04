@@ -61,7 +61,9 @@ const Hero = () => {
             HIRE ME
           </button>
           </a>
-          <button className='px-4 md:px-10 py-3 md:py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>ABOUT ME</button>
+          <a href="#about">
+            <button className='px-4 md:px-10 py-3 md:py-4 text-white bg-violet-500 rounded hover:bg-violet-800 transform transition duration-500 hover:scale-110 hover:bg-opacity-85'>ABOUT ME</button>
+          </a>
         </div>
       </div>
     </section>
