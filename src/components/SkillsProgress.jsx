@@ -30,7 +30,7 @@ const SkillsProgress = () => {
 
   return (
     <section className="mt-10 p-8 w-3/4 mx-auto">
-      <div className="max-w-7xl flex flex-col lg:flex-row mx-auto">
+      <div className="max-w-7xl flex flex-col mx-auto">
         <div className="w-full lg:w-2/3 lg:mr-20 items-start mb-6">
           <h2 className="text-xl font-bold mb-2 text-violet-500">MY SKILLS</h2>
           <h3 className='text-4xl md:text-5xl lg:text-5xl mb-4 text-textTheme font-semibold'>I Simply Love to Build</h3>
