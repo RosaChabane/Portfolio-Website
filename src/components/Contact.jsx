@@ -33,29 +33,29 @@ const ContactForm = () => {
       id="contact" 
       className="py-16 md:py-20 flex flex-col lg:flex-row items-center justify-center border-t border-violet-300 w-3/4 mx-auto justify-between"
     >
-      <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col w-full justify-between mx-auto pr-8 sm:pr-12'>
-        <div className='mb-4 md:mb-0 w-full'>
+      <div className='pb-10 lg:w-2/4 flex flex-col lg:flex-col w-full justify-between mx-auto sm:pr-12'>
+        <div className='mb-8 md:mb-0 w-full'>
           <h2 className='text-violet-500 font-semibold text-xl'>CONTACT ME</h2>
           <h3 className='text-4xl md:text-5xl text-textTheme font-semibold pb-4'>Shoot Me A Message</h3>
           <p className='md:pb-10 text-textTheme'>
             Feel free to message me with any questions or inquiries and I'll get back to you as soon as possible.
           </p>
         </div>
-        <div className='flex flex-row p-4 md:pt-0 w-full'>
+        <div className='flex flex-row p-4 w-full bg-violet-200'>
           <FontAwesomeIcon icon={faPhone} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>PHONE</span>
             <span>346-666-2511</span>
           </div>
         </div>
-        <div className='flex flex-row p-4 w-full'>
+        <div className='flex flex-row p-4 w-full bg-violet-300'>
           <FontAwesomeIcon icon={faEnvelope} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>Email</span>
-            <span className=''>rosachabane330@gmail.com</span>
+            <span className=''>rosachabane330@gmail</span>
           </div>
         </div>
-        <div className='flex flex-row p-4 w-full'>
+        <div className='flex flex-row p-4 w-full bg-violet-400'>
           <FontAwesomeIcon icon={faLinkedin} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme break-all'>
             <span className='font-semibold'>LINKEDIN</span>

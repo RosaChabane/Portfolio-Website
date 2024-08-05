@@ -56,25 +56,25 @@ const About = () => {
           </h3>
           <div className="max-w-prose">
             <p className="text-textTheme text-xl">
-            With a passion for building and learning, 
+            With a <span className='bg-fuchsia-100 p-1'>passion for building</span> and learning, 
             my journey in front and back-end development is fueled by self-directed learning and hands-on experience through various projects. 
-            I thrive on leveraging my strong problem-solving skills to create scalable solutions. 
-            I love tackling new challenges, continuously enhancing my skills, and collaborating with others to turn ideas into reality.
+            I <span className='md:bg-fuchsia-100 md:p-1'>thrive</span> on leveraging my <span className='bg-fuchsia-100 p-1'>strong problem-solving</span> skills to create scalable solutions. 
+            I love tackling new challenges, continuously enhancing my skills, and collaborating with others to <span className='bg-fuchsia-100 p-1'>turn ideas into reality.</span>
             </p>
           </div>
           <div className="mt-6">
             <div className="mb-6 flex flex-col md:flex-row">
-              <div className="flex flex-col pr-10 mb-2 md:mb-0">
+              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-200 pl-3 p-2">
                 <span className="font-extrabold text-textTheme">Name</span>
-                <span className="text-violet-500">Rosa Chabane</span>
+                <span className="text-violet-800">Rosa Chabane</span>
               </div>
-              <div className="flex flex-col pr-10 mb-2 md:mb-0">
+              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-300 pl-3 p-2">
                 <span className="font-extrabold text-textTheme">Email</span>
-                <span className="text-violet-500">rosachabane330@gmail.com</span>
+                <span className="text-violet-800">rosachabane330@gmail.com</span>
               </div>
-              <div className="flex flex-col pr-10">
+              <div className="flex flex-col pr-10 bg-violet-400 pl-3 p-2">
                 <span className="font-extrabold text-textTheme">Phone</span>
-                <span className="text-violet-500">346-666-2511</span>
+                <span className="text-violet-800">346-666-2511</span>
               </div>
             </div>
             <div className="flex space-x-4">
