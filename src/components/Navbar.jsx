@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className='bg-violet-400 sticky top-0 z-50'>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
-        <div className='flex h-20 items-center justify-between'>
+        <div className='flex h-15 sm:h-20 items-center justify-between'>
           <div className='flex flex-1 items-center md:items-stretch md:justify-start sm:justify-start'>
             <span className='text-white font-semibold text-2xl'></span>
           </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className='md:hidden'>
-            <button onClick={toggleMenu} className='text-white focus:outline-none'>
+            <button onClick={toggleMenu} className='text-white focus:outline-none p-4'>
               <svg className='h-8 w-8' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 {isOpen ? (
                   <path className='text-violet-800' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12' />
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
         {isOpen && (
-          <div className='absolute top-20 right-0 w-40 bg-violet-800 z-50'>
+          <div className='absolute top-15 right-0 w-40 bg-violet-800 z-50'>
             <div className='flex flex-col items-end space-y-2 p-4'>
               <a href="#hero" className='block px-3 py-2 text-base font-medium text-white border-b border-gray-500 w-full text-center'>Home</a>
               <a href="#about" className='block px-3 py-2 text-base font-medium text-white border-b border-gray-500 w-full text-center'>About Me</a>

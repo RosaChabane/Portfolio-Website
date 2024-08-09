@@ -29,17 +29,17 @@ const SkillsProgress = () => {
   }, []);
 
   return (
-    <section className="mt-10 p-8 w-3/4 mx-auto flex">
+    <section className="mt-10 md:p-8 w-3/4 mx-auto flex">
       <div className="max-w-7xl flex flex-col lg:flex-row mx-auto">
-        <div className="w-full lg:w-2/3 lg:mr-20 items-start mb-6">
+        <div className="w-full lg:w-2/3 lg:mr-20 items-start mb-2">
           <h2 className="text-xl font-bold mb-2 text-violet-500">MY SKILLS</h2>
           <h3 className='text-4xl md:text-5xl lg:text-5xl mb-4 text-textTheme font-semibold'>I Simply Love to Build</h3>
           <p className="mb-4 text-textTheme text-xl">
-            I have extensive experience in web development, focusing on technologies such as JavaScript, HTML, CSS, React, Node.js, and AWS. 
-            I love to explore new languages and technologies to bring creative ideas to life.
+            I have extensive experience in <span className='bg-fuchsia-100 p-1'>web development</span>, focusing on technologies such as JavaScript, HTML, CSS, React, Node.js, and AWS. 
+            I <span className='bg-fuchsia-100 p-1'>love to explore</span> new languages and technologies to bring <span className='bg-fuchsia-100 p-1'>creative</span> ideas to life.
           </p>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 mb-12">
           <div className="space-y-4" ref={ref}>
             {skills.map((skill, index) => (
               <div key={index}>

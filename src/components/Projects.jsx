@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-14 test">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className='flex flex-col items-center'>
         <h2 className="text-xl mb-2 text-violet-500 font-semibold border-b border-violet-300 p-2">PROJECTS</h2>
@@ -43,13 +43,13 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
           {projects.map((project, index) => (
-            <a key={index} href={project.siteLink} target="_blank" rel="noopener noreferrer" className="block p-6 lg:p-12 rounded-lg shadow-lg transition transform hover:scale-110 border border-blue-400 hover:border-blue-700">
+            <a key={index} href={project.siteLink} target="_blank" rel="noopener noreferrer" className="block p-6 lg:p-12 rounded-lg shadow-lg transition transform hover:scale-110 border border-2 border-violet-500 hover:border-violet-800 bg-white">
               <img src={project.gif} alt={project.title} className="w-full h-48 object-cover rounded-t-lg border border-violet-300" />
-              <span className='block text-violet-700 mt-3 mb-4'>Tech used: {project.techUsed}</span>
-              <h3 className="text-2xl font-semibold mb-1 text-textTheme">{project.title}</h3>
+              <span className='block text-violet-700 mt-3 mb-3'>Tech used: {project.techUsed}</span>
+              <h3 className="text-2xl font-semibold mb-3 text-textTheme bg-fuchsia-100 p-1">{project.title}</h3>
               <p className="mt-2 text-textTheme">{project.description}</p>
               <div className="mt-2">
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-700 hover:border-blue-700 mt-4 inline-block border border-blue-400 rounded p-2">
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-violet-500 hover:text-violet-800 hover:border-violet-800 mt-3 inline-block border border-violet-500 rounded p-2">
                   <FontAwesomeIcon icon={faGithub} className="" /> GitHub
                 </a>
               </div>

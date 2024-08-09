@@ -63,16 +63,16 @@ const About = () => {
             </p>
           </div>
           <div className="mt-6">
-            <div className="mb-6 flex flex-col md:flex-row">
-              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-200 pl-3 p-2">
+            <div className="mb-6 flex flex-col">
+              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-100 pl-3 p-2 sm:w-3/4">
                 <span className="font-extrabold text-textTheme">Name</span>
                 <span className="text-violet-800">Rosa Chabane</span>
               </div>
-              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-300 pl-3 p-2">
+              <div className="flex flex-col pr-10 mb-2 md:mb-0 bg-violet-200 pl-3 p-2 mt-2 sm:w-2/3">
                 <span className="font-extrabold text-textTheme">Email</span>
                 <span className="text-violet-800">rosachabane330@gmail.com</span>
               </div>
-              <div className="flex flex-col pr-10 bg-violet-400 pl-3 p-2">
+              <div className="flex flex-col pr-10 bg-violet-300 pl-3 p-2 mt-2 sm:w-1/2">
                 <span className="font-extrabold text-textTheme">Phone</span>
                 <span className="text-violet-800">346-666-2511</span>
               </div>

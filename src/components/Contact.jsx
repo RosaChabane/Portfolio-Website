@@ -41,21 +41,21 @@ const ContactForm = () => {
             Feel free to message me with any questions or inquiries and I'll get back to you as soon as possible.
           </p>
         </div>
-        <div className='flex flex-row p-4 w-full bg-violet-200'>
+        <div className='flex flex-row p-4 w-full bg-violet-100 mb-4'>
           <FontAwesomeIcon icon={faPhone} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>PHONE</span>
             <span>346-666-2511</span>
           </div>
         </div>
-        <div className='flex flex-row p-4 w-full bg-violet-300'>
+        <div className='flex flex-row p-4 w-full bg-violet-200 mb-4'>
           <FontAwesomeIcon icon={faEnvelope} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme'>
             <span className='font-semibold'>Email</span>
             <span className=''>rosachabane330@gmail</span>
           </div>
         </div>
-        <div className='flex flex-row p-4 w-full bg-violet-400'>
+        <div className='flex flex-row p-4 w-full bg-violet-300'>
           <FontAwesomeIcon icon={faLinkedin} className="p-4 border border-textTheme rounded-full text-textTheme" />
           <div className='flex flex-col ml-4 text-textTheme break-all'>
             <span className='font-semibold'>LINKEDIN</span>
